@@ -1,0 +1,102 @@
+
+august - 05 
+
+Java how to Program -by Paul Dietel and Dietel
+50 Algorithms
+
+-----------------------------------------------------------------------------------------------
+
+	-> Rabbit MQ : 
+	
+		Message broker between two parties.
+		
+	-> RabbitMQ spring starter project in VM : 15692 port active [stop , re-install, start] , publisher - consumer .
+	
+------------------------------------------------------------------------------------------------------------
+		
+		
+Loose Coupling : 
+---------------
+
+	- Loose coupling is an approach to interconnecting the components in a system,
+	network or software application so that those components, also called elements, depend on each other to the least extent practicable.
+	
+	- Loose coupling reduces the risk that a change made in one component, such as a database or user interface,
+	creates unanticipated changes in other parts.
+	
+	- In object-oriented programming, dependency injections provide loosely coupled components in a program with the resources they need. 
+	Dependency injections provide code that lets the resource know which other resources it should communicate with, 
+	where to locate them and how to communicate with them.
+	 
+	- Easier maintenance. With fewer interdependencies among components, fixing bugs becomes much simpler since only specific areas need attention.
+	
+----------------------------------------------------------------------------------------------------------------------	
+
+
+
+Use of Design Patterns:
+Patterns such as Dependency Injection (DI) and Factory Method help in creating loosely coupled components.
+
+Interface Segregation:
+Define specific, narrow interfaces rather than large, general-purpose ones to minimize dependencies.
+
+Event-Driven Architectures:
+Components communicate through events or messages, allowing them to remain decoupled and only respond to specific triggers.
+
+Service Contracts in SOA:
+Define clear service contracts that specify the interactions between services, independent of their implementations.
+
+Middleware and Message Brokers:
+Use middleware solutions like message brokers to handle communication between components, ensuring that components do not directly depend on each other.
+
+
+------------------------------------------------------------------------------------------------------------------
+
+Serialization - Marker Interface  - An interface which has no methods. 
+
+	Serializable - @SuppressWarnings("serial")
+	
+		Serialization and De-Serialization.
+		
+		Objects can be serialized -> java streams to memory.
+		Objects can be de-serialized -> memory to java streams.
+
+	Transient - 
+	
+		transient private int qty // transient adding -> wont maintain the state when declared as transient ( i.e, qty = 0).
+		
+---------------------------------------------------------------------------------------------------------------------------------------
+
+	JMS v/s KAFKA : 
+	----------------
+	
+		Apache Kafka is based on the commit log, and it allows users to subscribe to it and publish data to any 
+		number of systems or real-time applications. Example applications include managing passenger and driver matching at Uber, 
+		providing real-time analytics and predictive maintenance for British Gas smart home, 
+		and performing numerous real-time services across all of LinkedIn.
+		
+		1. Streaming Queue - Short messages.
+		2. Scalable and fault tolerant 
+		3. Durable
+		4. Timestamp attached to every message.
+		5. Iterative
+		
+	alternatives  : Apache pulsor , Amazon Kinesis, Redhat, IBM MQ.
+	
+	kafka developed by linkedin.
+	
+	Linkedin kindof websites : Indeed, Monster etc etc 
+	
+	-----------------------------------------------------------------------------------------------------------------------------------
+	
+	kafka configuration: 
+	
+	-> add bin path to env variables. 
+	-> edit server.properties and zookeeper.properties in the kafka->config folder
+	
+	
+	
+		
+	
+	
+	

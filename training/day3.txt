@@ -1,0 +1,81 @@
+
+1.dive more deep into spring IOC
+2.more maven concepts
+3.complete yesterday's task
+4.complete your family app
+--------------------------------------------------------------------------------------------------
+
+theory-
+
+	1.there are two types of spring dependecies - constructor and setter injection,
+
+	2.features of spring - 
+
+	3. classpath and fileSystemXml.
+
+impl-
+
+	1.eclipse set up and bean.
+
+	2.class, object, constructor, method(s).
+
+	3.java basics, private public, toString();
+
+	4.Logger logger = Logger.getLogger("TestShapes");
+
+	logger.info(factory +"")		//type conversion.
+
+	logger.info(s.toString());
+
+
+---------------------------------------------------------------------------------------------------------
+
+theory- 
+	1.bean factory v/s ApplicationContext
+
+	for both bean factory and application context, there needs scope. 
+	singleton & prototype. 
+
+	<bean name="rect" class = "com.iiht.iocday2.Rectangle" scope="singleton" > 
+
+	<property > or <constructor-arg>
+
+	</bean> //bean ends
+
+
+2. types of scopes: 
+
+	singleton - (Default) Scopes a single bean definition to a single object instance for each 	Spring IoC container.
+
+	prototype - Scopes a single bean definition to any number of object instances.
+
+	request - Scopes a single bean definition to the lifecycle of a single HTTP request. That 	is, each HTTP request has its own instance of a bean created off the back of a single bean 	definition. Only valid in the context of a web-aware Spring ApplicationContext.
+
+	session - Scopes a single bean definition to the lifecycle of an HTTP Session. Only valid in 	the context of a web-aware Spring ApplicationContext.
+
+	application - Scopes a single bean definition to the lifecycle of a ServletContext. Only 	valid in the context of a web-aware Spring ApplicationContext.
+
+	websocket -Scopes a single bean definition to the lifecycle of a WebSocket. Only valid in 	the context of a web-aware Spring ApplicationContext.
+
+3.
+
+	lifecycle management- 
+
+	init and destroy methods
+
+4.
+
+	autowiring
+
+
+------------------------------------------------------------------------------------------
+
+1.Line : 2 points 
+2.Point : x and y 
+
+
+
+
+
+
+

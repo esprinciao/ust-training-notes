@@ -1,0 +1,97 @@
+    @PostMapping("/create-user")
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+        User savedUser = userRepository.save(user);
+        return ResponseEntity.ok(savedUser);
+    }
+
+
+	    @PostMapping("/issue-book")
+    public ResponseEntity<Issue> issueBook(@RequestBody Issue issue) {
+	
+        Optional<User> userOpt = userRepository.findById(issue.getUser().getId());
+        if (userOpt.isPresent() && userOpt.get().getSubscribed()) {
+            Issue savedIssue = issueRepository.save(issue);
+            return ResponseEntity.ok(savedIssue);
+        } else {
+            throw new UserNotSubscribedException("User subscription has expired.");
+        }
+    }
+
+	    @GetMapping("/renew-user-subscription/{id}")
+    public ResponseEntity<User> renewUserSubscription(@PathVariable Long id) {
+	H
+        Optional<User> userOpt = userRepository.findById(id);
+		
+        if (userOpt.isPresent()) {
+            User user = userOpt.get();
+            user.setSubscribed(true);
+            userRepository.save(user);
+            return ResponseEntity.ok(user);
+        } else {
+            return ResponseEntity.noContent().build();
+        }
+    }
+}
+
+protected void configure(HttpSecurity http) throws Exception {
+        http
+            .csrf().disable()
+			
+            .authorizeRequests()
+            .antMatchers("/api/v1/issue-book").hasRole("USER")
+            .antMatchers("/api/v1/create-user", "/api/v1/renew-user-subscription/**").hasRole("ADMIN")
+            .anyRequest().authenticated()
+			
+            .and()
+            .httpBasic();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+	
+        auth.inMemoryAuthentication()
+		
+            .withUser("user")
+            .password(passwordEncoder().encode("userpassword"))
+            .roles("USER")
+			
+            .and()
+			
+            .withUser("admin")
+            .password(passwordEncoder().encode("adminpassword"))
+            .roles("ADMIN");
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+	
+
+	    @PostMapping("/issue-book")
+    public ResponseEntity<Issue> issueBook(@RequestBody Issue issue) {
+	
+	Optional<User> optUser = userRepository.findById(issue.getUser().getId())
+	
+	if(userOpt.isPresent() && optUser.get().getSubscribed())
+	{
+	
+	Issue issue = issueRepository.save(issue)
+	
+	
+	
+	}else{
+	
+	throw new user
+	
+	//return ResponseEntity.noContent().build();
+	
+	return ResponseEntity.status(HttpStatus.CREATED).build()
+    }
+
+	  

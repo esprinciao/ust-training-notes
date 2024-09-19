@@ -1,0 +1,14 @@
+
+	Java
+	-----
+	
+	=> data members can be static or non static.
+	=> anonymous blocks.
+	
+	static{}
+	
+	=> auxilary methods - constructors.
+	=> mutators - accessor - set/get - provide public interface to private data.
+	=> member methods - static and non-static
+	=> nested classes interfaces enums and records.
+	

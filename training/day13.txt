@@ -1,0 +1,38 @@
+
+	1. Boot - Spring projects.
+	2. Maven - all the dependencies / mvn repository.
+	3. Git - making code live / share anywhere.
+	
+	4. Jenkins - automation & integration / automatic building / git integration.
+	5. Docker - for creating an image.
+	6. Kubernetes - cluster/ multiple instances.
+ 	
+	all these are used for automating and replications the final softwares build etc. 
+		
+	:: boot -> jar file (Dockerfile) -> Docker (docker commands) -> image (pushed to dockerhub) -> 
+	
+								->image_repo_link given to yaml (kubernet) -> accesed via localhost.
+	
+-----------------------------------------------------------------------------------------------------
+
+	JMS - Java Message Service
+	--------------------------
+	
+	-> Synchronous and Asynchronous communication.
+	
+	-> IBM MQ
+	
+	-> Rabbit MQ - messaging and streaming broker.
+	
+				RABBIT MQ - 
+				
+						RabbitMQ is an open-source message broker software that implements the Advanced Message Queuing Protocol (AMQP). 
+						It is used to facilitate communication between different parts of a distributed application by sending messages between them.\\
+					
+				APACHE KAFKA - 
+					
+						Apache Kafka is an open-source stream-processing platform developed by LinkedIn and donated to the Apache Software Foundation. 
+						It is written in Scala and Java and aims to provide a unified, high-throughput, low-latency platform for handling real-time data feeds.
+					
+			
+				

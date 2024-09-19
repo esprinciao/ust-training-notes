@@ -1,0 +1,11 @@
+
+	Recreate what you did yesterday using divs
+	Create your own website using html semantic tags
+	
+--------------------------------------------------------------------------------------------------
+
+	It uses semantic landmarks conveniently named <header>, <main>, <footer>, and <nav> for "navigation." 
+	provide structure to web content and ensure important sections of content are keyboard-navigable for screen reader users.
+	
+	
+	Bootstrap.html

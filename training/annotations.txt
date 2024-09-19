@@ -1,0 +1,59 @@
+
+
+Annotations: 
+
+
+@Autowired: Used for automatic dependency injection by Spring.
+ 
+@Component: Indicates a class is a Spring-managed component.
+ 
+@Bean: Marks a method to produce a bean to be managed by the Spring container.
+ 
+@Qualifier: Used with @Autowired to specify which bean to inject when multiple beans of the same type are present.
+ 
+@Primary: Marks a bean as preferred when multiple beans of the same type are candidates for autowiring.
+ 
+@Service: Indicates that a class is a service layer component in Spring MVC or general Spring applications.
+ 
+@Configuration: Indicates that a class provides bean definitions to the Spring application context.
+
+	- java configuration
+ 
+@PostConstruct: Marks a method to be invoked after dependency injection is complete.
+ 
+@PreDestroy: Marks a method to be invoked before the bean is removed from the Spring context.
+ 
+@PropertySource: Specifies the properties file to be used by the Spring Environment.
+ 
+@Value: Injects a value from properties files, system properties, or environment variables into a Spring bean.
+
+
+
+
+@Lazy - initialized when needed // 
+
+@DependsOn
+
+@Lookup - indicates a method as lookup method.
+
+@Scope
+
+
+Configuration annontations : 
+
+
+@Configuration
+
+@ComponentScan
+
+@Profile -  3 profiles - dev, test, prod - we can change it during runtime to switch profiles.
+
+@Import - for importing the configuration classes.
+
+@ImportResource.
+
+
+
+
+
+

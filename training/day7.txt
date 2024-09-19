@@ -1,0 +1,228 @@
+
+----------------------------------------------------------------------------------------
+For today :
+
+    1           2         3
+Exceptions / Swagger / Actuator / 	 how to mappings (onetoone, onetomany, manytoone, manytomany .......)
+
+Profiles ( Dev,Test,qa,prod,stage,local, integration)
+
+Microservices
+----------------------------------------------------------------------------------------
+
+
+
+AOP
+------
+Aspect-Oriented Programming (AOP) is a programming paradigm that aims to increase modularity by allowing the separation of cross-cutting concerns.
+
+
+Benefits of AOP:
+----------------
+
+	Modularity: Separates cross-cutting concerns, making the code cleaner and easier to maintain.
+	Reusability: Aspects can be reused across different parts of the application.
+	Maintainability: Changes to cross-cutting concerns can be made in one place rather than scattered throughout the codebase.	
+	
+
+----------------------------------------------------------------------------------------------------------
+
+  1.
+	
+Exceptions:
+-----------
+
+Exceptions are events that occur during the execution of a program that disrupt the normal flow of instructions. 
+In Java, exceptions are objects that represent an error or unexpected event.
+
+Types of Exceptions:
+--------------------
+1.Checked Exceptions: 
+These are exceptions that are checked at compile-time. 
+The programmer must handle these exceptions, either by using a try-catch
+block or by declaring the exception in the method signature using the throws keyword.
+
+Example: IOException, SQLException
+
+2.Unchecked Exceptions: 
+These are exceptions that occur at runtime and are not checked at compile-time. They are subclasses of RuntimeException.
+
+Example: NullPointerException, ArrayIndexOutOfBoundsException.
+
+3.Errors: 
+These are serious problems that a reasonable application should not try to catch. 
+They are usually related to the environment in which the application is running.
+
+Example: OutOfMemoryError, StackOverflowError
+
+
+--------------------------------------------------------------------------------------------------------------
+
+Global Exception Handler in Spring Framework
+----------------------------------------------
+A Global Exception Handler in Spring is used to handle exceptions globally across the entire application, 
+providing a centralized and consistent way to manage error responses. 
+This is achieved using the @ControllerAdvice annotation along with @ExceptionHandler methods.
+
+Key Points:
+@ControllerAdvice:
+
+This annotation is used to define a class that will contain global exception handling methods.
+It applies to all controllers in the application, unless explicitly specified to target particular controllers.
+@ExceptionHandler:
+
+This annotation is used to define methods that handle specific exceptions.
+Each method annotated with @ExceptionHandler will handle exceptions of the specified type and its subclasses.
+@ResponseStatus:
+
+This annotation is used to set the HTTP status code for the response when an exception is thrown.
+@ResponseBody:
+
+Indicates that the return value of a method should be written directly to the HTTP response body.
+ResponseEntity:
+
+Used to send an HTTP response with the specified status code, headers, and body.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+		
+		AOP and cross cutting concerns :  (https://chatgpt.com/share/2446bf65-04a3-476e-b186-ddf191a3fe35)
+		--------------------------------
+		
+		Cross-cutting concerns in Spring are aspects of a program that affect multiple layers or components but do not fit into the 
+		primary business logic of the application. The concerns typically include functionalities that are needed across different parts of the application, 
+		and separating them helps in maintaining a cleaner and more modular codebase.
+		
+		The four main cross-cutting concerns often discussed in the context of Spring are:
+		
+		1. Logging 
+		2. Security
+		3. Transaction management
+		4. Exception Handling.
+		
+		
+-------------------------------------------------------------------------------------------------------------------------------	
+
+	2. 
+	
+	
+	Swagger - ui 
+	-------------
+	
+	Swagger UI is a powerful tool used for visualizing and interacting with APIs. 
+	It provides a web-based interface that allows developers and users to explore and test API endpoints defined by an OpenAPI Specification. 
+	Swagger UI is part of the larger Swagger ecosystem, which includes tools for designing, building, and documenting APIs.
+	
+	->swagger-ui/index.html
+	
+	
+		
+---------------------------------------------------------------------------------------------------------------------------------
+
+	3.
+
+ 	
+	
+Actuator- 
+---------
+
+Actuators in Spring Boot provide a way to monitor and manage your application in production. 
+They expose various endpoints that can be used to retrieve information about the application's health, metrics, and other management-related data.
+
+
+
+
+Common Actuator Endpoints:
+--------------------------
+
+/actuator/health: Provides the health status of the application. It can include information about database connectivity, disk space, and other critical aspects.
+/actuator/metrics: Provides various metrics related to the application's performance, such as memory usage, garbage collection, and request counts.
+/actuator/env: Exposes details about the application's environment, including configuration properties.
+/actuator/threaddump: Provides a thread dump of the application, which can help in diagnosing threading issues.
+/actuator/info: Displays arbitrary application information, such as build version and description.
+
+ eg:
+	
+	localhost:8090/actuator  //syntax
+	
+	localhost:8090/actuator/threaddump 
+	
+	localhost:8090/actuator/health
+	
+	dependency we need to add : 
+
+ dependency: 
+ 
+	<dependency>
+	<group-id> org.springdoc</group-id>
+	<artifact-id> springdoc-openapi-starter-webmvc-ui</artifact-id>
+	<version>2.0.2</version>
+	
+	</dependency>
+	
+	
+By default, actuator endpoints are secured. You can configure access to these endpoints using Spring Security. 
+For example, you might want to restrict access to /actuator/health and /actuator/metrics to authorized users only.
+	
+skunk and prometheus are tools which will bring the details integrated to the dashboard.)
+	
+You can customize which endpoints are enabled or disabled and their exposure levels in the application.properties or application.yml file:
+
+			management.endpoints.web.exposure.include=health,info
+			management.endpoint.health.show-details=always
+
+
+----------------------------------------------------------------------------------------------------------
+
+	application.properties v/s application.yml - 
+													are two representations.
+													
+													in properties - an inline line representation.
+													in yml - a hierarchial representation
+													
+
+------------------------------------------------------------------------------------------------------------
+
+			PROFILES ( Dev, Test and Production) : (it is a .properties file   / -> .properties manipulation)
+			------------------------------------
+			
+			1.application-dev.properties
+			2.application-prod.properties			
+			3.application-test.properties
+
+
+			
+--------------------------------------------------------------------------------------------------------------
+
+Landline           vs           MobilePhone :
+
+wired      				 		wireless
+no gui    				   		gui 
+unable to carry around          able to carry
+limited features				more features
+no internet						internet
+
+DETAILS TO START UP A TELECOM COMPANY (?)
+
+
+----------------------------------------------------------------------------------------------------------------
+
+3. 
+
+											Microservices
+
+
+Microservices architeccture.
+
+API Gateway is also called Edge service.
+
+service - 		model->repository->controller->services
+
+
+											
+
+
+
+
+

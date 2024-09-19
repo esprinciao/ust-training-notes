@@ -1,0 +1,59 @@
+
+
+LifeCycleAnnotations:
+
+	bean init methods.
+	
+	things and configurations happening before init() really happens.
+
+	codeshare.io/ust6
+
+	link- https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/BeanFactory.html
+
+	//link for spring beans and configs.
+
+	https://docs.spring.io/spring-framework/reference/core/beans/factory-extension.html#beans-factory-extension-bpp-examples-aabpp
+
+	//link for spring properties - ioc
+
+	EJB V/S POJO (Playing Around Java Objects) : 
+							beans v/s components (auto instantiated) 
+	
+	
+	package -
+
+	ioc.annotationsjavaconfig: 
+	mobile- pojo - sim,atnt,tmobile and setting up configurations (@Configuration) and Components (@Component).
+
+
+
+Annotations learned: 
+
+	
+
+Annotations:
+
+@Autowired: Used for automatic dependency injection by Spring.
+ 
+@Component: Indicates a class is a Spring-managed component.
+ 
+@Bean: Marks a method to produce a bean to be managed by the Spring container.
+ 
+@Qualifier: Used with @Autowired to specify which bean to inject when multiple beans of the same type are present.
+ 
+@Primary: Marks a bean as preferred when multiple beans of the same type are candidates for autowiring.
+ 
+@Service: Indicates that a class is a service layer component in Spring MVC or general Spring applications.
+ 
+@Configuration: Indicates that a class provides bean definitions to the Spring application context.
+ 
+@PostConstruct: Marks a method to be invoked after dependency injection is complete.
+ 
+@PreDestroy: Marks a method to be invoked before the bean is removed from the Spring context.
+ 
+@PropertySource: Specifies the properties file to be used by the Spring Environment.
+ 
+@Value: Injects a value from properties files, system properties, or environment variables into a Spring bean.
+
+
+	

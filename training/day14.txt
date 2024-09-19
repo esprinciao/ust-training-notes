@@ -1,0 +1,20 @@
+
+	AWS
+	----
+	
+	EC2:
+	----
+	
+	->EC2 instance creation
+	-> users
+	-> user groups
+	-> roles
+	
+	RDS:
+	----
+	
+		endpoint: test.c7iiowy8kih6.ap-south-1.rds.amazonaws.com
+		
+		password: Prince2003
+	
+	

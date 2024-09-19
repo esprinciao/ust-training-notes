@@ -1,0 +1,17 @@
+
+	Amazon Elastic Container Registry 
+	
+	Amazon Elastic Container  Service
+	
+	AWS fargate - interacts with kubernetes.
+	
+	
+	create a role for codebuild to access ECS
+	
+	TWO permissions  :
+	AmazonEC2ContainerRegistryFullAccess
+	
+----------------------------------------------------------------------------
+
+	build ecr image. 
+	ecs deployment on aws.

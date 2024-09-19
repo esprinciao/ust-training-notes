@@ -1,0 +1,20 @@
+
+
+
+	ANGULAR :  //SPA - Single Page Applications   //Google  //Web Application Framework
+	
+	//app.module.ts
+	
+	
+	//app.component.ts   => JAVASCRIPT
+	
+	
+	->selectors , templateURL , styleURL
+	
+	-> functions in js => component.
+	
+	
+	//app.component.css => CSS
+	//app.component.html => HTML
+	
+	//index.html

@@ -1,0 +1,23 @@
+
+
+	Promise v/s Observable
+	-----------------------
+	
+	Produces in one large chunk  / Produces in streams
+	Produces even if there is no consumer / observerable will only produce when there is a consumer
+	Communicates synchronously / Observable communicates in asynchronous mode
+	Blocks the client durning communication / Does not block client during communincation and needs a call back.
+	
+--------------------------------------------------------------------------------------------------------------------
+
+	During presentation: 
+	--------------------
+	
+	=> Life Cycle of the Angular Application.
+	=> Life Cycle of an aasynchronous application.
+	=> Testing and security of the application.
+	=> Binding from component to the view.
+	
+--------------------------------------------------------------------------------------------------------------------
+
+	init , destroy etc are call back methods , life cycle methods.

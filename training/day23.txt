@@ -1,0 +1,14 @@
+
+	media query 
+	
+	@media to support different viewports 
+	
+	
+	Javascript basics input/output
+	lang and type features/logging
+	arrays
+	functions
+	{}functions
+	Event handlers
+	CSS with JS
+	

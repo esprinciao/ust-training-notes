@@ -1,0 +1,27 @@
+
+Implement  JDBC based connection:
+----------------------------------
+
+jdbc authentication.
+filters
+servelets.
+
+layers and flow of jdbc program.
+
+token.
+
+---------------------------------------
+
+Authentication .
+----------------------------------------
+
+
+			JENKINS: 
+					
+					Jenkins is an open-source automation server that is widely used for continuous integration (CI) and continuous delivery (CD). 
+					It helps automate the parts of software development related to building, testing, and deploying, 
+					facilitating the continuous delivery of software.
+
+Jenkins: 
+
+	free style project and pipeline project (tommorow?)

@@ -1,0 +1,102 @@
+
+	1.Circuit Breaker Introduction
+	2.Gateway Load Balancing - 3 services - lbeureka , lbservice , lbgateway
+	3.Sleuth
+
+----------------------------------------------------------------------------------------------------------------
+
+In spring.io/prjects/spring-cloud : 
+	there exists various applications like :
+		spring cloud config
+		spring cloud cli
+		spring cloud openfeignspring cloud gateway
+		spring cloud security
+		
+		etc etc 
+		
+		and other outdated includes : 
+			spring cloud amazon web services
+			spring cloud azure 
+			spring cloud alibaba 
+			etc etc 
+			
+		depending on the project you have to use the required projects by doing research in spring.io/projects
+		
+	
+-----------------------------------------------------------------------------------------------------------------
+
+Circuit Breaker microservice - 
+-------------------------------
+
+Equivalent to exceptions in java, an important microservice.
+
+
+
+	RestTemplate - 
+
+		In Spring Boot, RestTemplate is a synchronous client used to make HTTP requests to RESTful web services. 
+		It provides methods for various HTTP operations such as GET, POST, PUT, DELETE, and more, allowing for easy communication with RESTful services.
+		
+		
+		//bean creation : 
+		
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+	//@HTTP GET REQUEST USING RESTTEMPLATE :
+
+@Service
+public class ApiService {
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    public String getExample() {
+        String url = "https://jsonplaceholder.typicode.com/posts/1";
+        return restTemplate.getForObject(url, String.class);
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+eureka:client:service-url:default-zone: http://localhost:8761/eureka 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+	2.Gateway Load Balancing - 3 services - lbeureka , lbservice , lbgateway
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+ SPRING CLOUD SLEUTH - 
+ 
+ [ application name, traceId, spanId, export]
+
+Application name – This is the name we set in the properties file, and can be used to aggregate logs from multiple instances of the same application.
+TraceId – This is an id that’s assigned to a single request, job, or action. Something like each unique user initiated web request will have its own traceId.
+SpanId – Tracks a unit of work. Think of a request that consists of multiple steps. Each step could have its own spanId and be tracked individually. By default, any application flow will start with the same TraceId and SpanId.
+Export – This property is a boolean that indicates whether or not this log was exported to an aggregator like Zipkin. Zipkin is beyond the scope of this article, but plays an important role in analyzing logs created by Sleuth.
+   
+   
+Prometheus - Graphana : 
+	
+	Sleuth server and Sleuth client
+	
+	
+------------------------------------------------------------------------------------------------------------------------------------------------------
+

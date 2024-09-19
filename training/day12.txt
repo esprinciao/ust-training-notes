@@ -1,0 +1,94 @@
+
+	1.Docker commands
+	2.Docker Architecture
+	
+	3.Running web site with httpd and ngninx
+	
+	4.docker hub integration
+	
+------------------------------------------------------------------------------------------------------------
+
+	Docker commands:
+	----------------
+	
+	docker version
+	docker images
+	docker ps 
+	docker ps -and
+	
+	
+	docker pull nginx:1.23 
+	
+	docker logs <cont_id>
+	docker stop <cont_id>
+	
+	docker exec -t <cont_id> bash 
+	
+	docker build -t node-app:version .
+	
+	docker tag hello-app:latest (?) (? how to connect docker and git ?)
+	
+	reference link : (docker commands classification) : hostinger.tutorials //docker commands are well classified.
+	
+	->docker run -d -p 9000:80 ubapache:latest // to change port from 8080 to 9000 and run apache server on ubuntu.
+	
+-------------------------------------------------------------------------------------------------------------------
+
+	docker architecture: 
+	--------------------
+	
+	1. Docker CLI - docker build, pull , run etc
+	2. Docker host - docker daemon (Main process) // [docker desktop service - explicitly run / while start up]-> controls ->  containers, Images
+	3. Registry
+	
+-------------------------------------------------------------------------------------------------------------------
+
+	
+	Clusters - kubernetes 
+	----------------------
+	
+	kubernetes:
+		
+		-> kubectl 
+		
+		-> kubectl commands 
+		
+		-> 
+				minikube start --driver=docker
+				kubectl apply -f nginx-dep.yaml
+				kubectl create -f nginx-serv.yaml
+				
+				kubectl get deployment / pods [pods are on top of nodes kinda]
+				
+				kubectl expose deployment nginx-svc --type=NodePort --port = 8080 // doesnt work
+				
+			    kubectl port-forward service/nginx-svc 7078:80 //works
+				                     -----------------
+		
+	
+		to edit the html file using kubernetes: 
+		---------------------------------------
+				
+				kubectl exec -it service/nginx-svc -- bash      <container_id = service/nginx-svc>
+				
+				
+				then navigate to the html  file and then edit.
+				
+				
+				
+		to save / push to dockerhub: 
+		----------------------------
+		
+		1.	
+			docker tag hello:v1 princeriyas/example:v1   //creating repo explicitly.
+			docker push princeriyas/example:v1
+		
+		2.
+			docker tag hello:v1 princeriyas/dockerhub:hello
+			docker push princeriyas/dockerhub:hello
+			
+	----------------------------------------------------------------------
+	
+		kubernetes - docker (?yaml files to edit and add the docker name ).
+		
+		https://gist.github.com/anilboppuri/ef05300012b0511fd417ec7c5fb79a62#file-gistfile1-txt

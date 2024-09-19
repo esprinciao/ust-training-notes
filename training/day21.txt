@@ -1,0 +1,12 @@
+
+
+	CSS - propagate downwards : 
+	
+	Cascading Style Sheets
+	
+		-> styles at three levels : element level - inline 
+								 page level - effect elements in a single page 
+								 exrernal style sheet - easy to change globally to all html files, maintainence easy
+
+	
+	    -> selectors in CSS 

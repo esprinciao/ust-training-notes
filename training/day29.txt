@@ -1,0 +1,33 @@
+
+	@ViewChild vs @ContentChild
+	
+	Life cycle methods.
+	
+	Constructor is not a life cycle method but it is called as the first method when an angular application runs.
+	
+	
+	Life cycle hooks :
+	Order of The angular lifecycles hooks
+		
+		ngOnChanges
+
+		ngOnInit
+
+		ngDoCheck
+
+		ngAfterContentInit
+
+		ngAfterContentInitChecked
+
+		ngAfterViewInit
+
+		ngAfterViewInitChecked
+
+		ngOnDestroy
+		
+		
+		Resources : https://www.angularminds.com/blog/angular-lifecycle-hooks-best-practices
+		
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+	

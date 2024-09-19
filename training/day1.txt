@@ -1,0 +1,119 @@
+to create our own website and host it by the end of the training.
+timeline, 
+angular and javascript,
+github and linked in,
+
+
+front end-
+user interface, ui/ux
+
+backend - 
+security and authentication protocols,
+stable storage system,
+servers
+
+
+how many types of servers?what are their architecture and configurations?
+
+how software is converted to an image?
+
+more about virtualization?
+
+
+classes-
+
+class Phone{
+
+private string modelName;
+private int mobileId;
+private int price;
+private int ram;
+
+}
+
+
+class Perfume{
+
+private int price;
+private string type;
+private int volume;
+private string madeIn;
+}
+
+
+class Diamond{
+
+private int price;
+private int weight;
+private string manufacturer;
+
+}
+
+keywords-
+
+instanceof,
+throws,
+transient,
+default- switch case, default methods of a functional interfacee,
+synchronized
+
+
+cloud-
+
+iaas saas paas,
+
+
+microservices-
+
+limitations of monolith-
+
+1.Difficult to integrate.
+2.scalability - not easy to scale.
+3.scaling can be of two types - horizontal and vertical.
+4.not easy to upgrade.
+
+SOA- service oriented architecture.
+
+
+interoperability-
+
+SOA principles are realized and implemented using web services.
+
+sap and erp softwares.
+
+SERVICE ORIENTED ARCHITECTURE - triangle picture.
+
+spring tool suite 4.X or latest
+install jdk21
+install maven 3.x
+
+
+
+JAVA_HOME // adding to environmental variables.
+
+%PATH%;%JAVA_HOME%\bin
+
+1.
+
+set classpath = %CLASSPATH%;d:\source; // to set classpath.
+
+
+2.
+
+importing.
+
+FOR HELP: java docs
+
+
+chatgpt: 
+
+
+
+
+
+
+
+
+
+
+

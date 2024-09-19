@@ -1,0 +1,32 @@
+			
+		W3C -> World Wide Web Consortium
+		---
+		 
+		-> SGml :extended to XML AND HTML.
+		-> XML VS HTML.
+		
+		HTML5 CSS and JAVASCRIPT.
+		
+		-> DOM - Document Object Model
+		
+		-> Parsing and javascript processes DOM.
+		
+	
+		DNS resolution hostnames to IP addresses.
+		TCP/TLS handshakes.
+		Fetch webpages from server.
+		Browser parses and renders the HTML response.
+		Browser handles post-load user interactions with the page.
+		
+		CUI - GUI -> AWT, Swing - create content, how to handle events/actions and produce or process actions/events.
+		
+		-> DTD - Document Type Definition
+		
+		-> DOCTYPE
+		
+		-> validation - in xml file is checked by the DTD file.
+		
+		
+		-> Tags -> 2 types : block level and inline tags.
+		
+		

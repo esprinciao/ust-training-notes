@@ -1,0 +1,373 @@
+
+
+ Java Collection framework provides many interfaces (Set, List, Queue, Deque) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+collections 
+
+Store:
+
+eggs
+milk 
+chocolates
+apples
+bread
+
+
+import java.util.*;
+import java.io.*;
+
+							1. EGGS
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+class Eggs{
+
+int shelfLife;
+int price;
+
+private ArrayList<Integer> eggList = new ArrayList<>(); 		//no. of eggs availible in the store
+
+
+public Eggs(int shelflife,int price){
+
+this.shelfLife = shelfLife;
+this.price = price;
+
+
+}
+
+
+
+public int setEggs(int i){
+
+while(i>0){
+
+eggList.add(i);
+i--;
+}
+
+
+return eggList.size();
+
+}
+
+public int getEggs(int i){
+
+while(i>0){
+eggList.remove(i);
+i--;
+}
+
+return eggList.size();
+
+}
+
+public boolean checkEggs(ArrayList<Integer> eggList){
+
+if(eggList.size() == 0 )
+return false;
+else
+return true;
+
+}
+
+}
+
+
+
+
+									2.MILK
+
+--------------------------------------------------------------------------------------------------------------------------
+
+class Milk{
+
+int expiryDate;
+string type;
+string brand;
+int price
+
+
+
+private HashSet<Integer> milkPackets = new HashSet<>();				 //no. of milk packets availible in the store
+
+
+public Milk(int expiryDate, string type, string brand,int price){
+
+this.expiryDate = expiryDate;
+this.type = type;
+this.brand = brand;
+this.price=price;
+
+}
+
+
+
+public int setMilk(int i){
+
+while(i>0){
+
+milkPackets.add(milkPackets.size() + i);
+
+i--;
+
+}
+
+return milkPackets.size();
+
+}
+
+public void getMilk(int i){
+
+
+
+while(i>0){
+
+Integer packet = noOfPackets.iterator().next();
+
+MilkPackets.remove(packet);
+i--;
+
+
+
+}
+
+public boolean checkMilk(HashSet<Integer> MilkPackets){
+
+if(MilkPackets.size() == 0 )
+return false;
+else
+return true;
+
+
+}
+
+
+}
+
+
+								3.CHOCOLATES
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+class Chocolates{
+
+int expiryDate;
+string type;
+string brand;
+int price;
+
+
+
+private LinkedList<Integer> chocolates = new LinkedList<>();				 //no. of chocolates availible in the store
+
+
+public Chocolates(int expiryDate, string type, string brand){
+
+this.expiryDate = expiryDate;
+this.type = type;
+this.brand = brand
+
+
+}
+
+
+
+public int setChocolates(int i){
+
+int j=0;
+
+while(j<i)
+
+{
+
+chocolates.add(chocolates.size() + j , chocolates.size() + j);
+
+i--;
+
+}
+
+return milkPackets.size();
+
+}
+
+public void getChocolates(int i){
+
+
+
+while(i>0){
+
+
+int removedElement = chocolates.removelast();
+
+return chocolates.size();
+
+i--;
+
+
+
+}
+
+public boolean checkChocolates(LinkedList<Integer> chocolates){
+
+if(chocolates.size() == 0 )
+return false;
+else
+return true;
+
+
+}
+
+
+}
+
+
+
+								3.APPLES
+
+--------------------------------------------------------------------------------------------------------------------------
+
+class Apples{
+
+
+
+string type;
+string color;
+int price;
+TreeSet<Apples> appleSet = new TreeSet<>();
+
+
+public Apples(string type, string color, int price){
+
+this.expiryDate = expiryDate;
+this.type = type;
+this.brand = brand;
+
+}
+
+
+public int setApples(int i){
+
+int j=0;
+
+while(j<i)
+
+{
+
+Apples.add(.size() + j , chocolates.size() + j);
+
+i--;
+
+}
+
+return milkPackets.size();
+
+}
+
+public void getChocolates(int i){
+
+
+
+while(i>0){
+
+
+int removedElement = chocolates.removelast();
+
+return chocolates.size();
+
+i--;
+
+
+
+}
+
+public boolean checkChocolates(LinkedList<Integer> chocolates){
+
+if(chocolates.size() == 0 )
+return false;
+else
+return true;
+
+
+}
+
+
+}
+
+
+        
+
+}
+
+
+----------------------------------------------------------------------------------------
+
+
+
+XML AND HTML 
+
+basics of html 
+
+.xml file - 
+
+structure
+doc tag
+bean
+
+
+bean.xml (ready to execute when jar files are ready) :
+
+
+//for eggs:
+
+
+//injecting primitive valules:
+
+
+<bean name ="countryEgg1" class = "com.ust.products.Egg">
+
+<constructor -arg name = "id" value = "101"> </constructor - arg>
+<constructor -arg name = "description" value = "heritage"> </constructor - arg>
+
+
+<bean name ="countryEgg2" class = "com.ust.products.Egg">
+
+<constructor -arg name = "id" value = "101"> </constructor - arg>
+<constructor -arg name = "description" value = "heritage"> </constructor - arg>
+
+<bean name ="countryEgg3" class = "com.ust.products.Egg">
+
+<constructor -arg name = "id" value = "101"> </constructor - arg>
+<constructor -arg name = "description" value = "heritage"> </constructor - arg>
+
+
+
+
+
+//injecting an object:
+
+<bean name ="eggList" class = "com.ust.products.ArrayList">
+
+<constructor -arg > 
+		
+<list>
+
+			<ref bean = "countryEgg1"/>
+			<ref bean = "countryEgg2"/>
+			<ref bean = "countryEgg3"/>		
+
+
+</list>	
+</constructor - arg>
+
+	
+
+#similiarly for milk and other classes.
+
+
+
+
+
+

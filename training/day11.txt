@@ -1,0 +1,137 @@
+
+Today: (FIRST WEEK CONTENTS ARE OVER BY THIS DAY) // microservices also done -> moving onto AWS after docker.
+
+1.Jenkins - Pipeline - Script based and  Groovy - UI based.
+2.Circuit Breaker - Resilience4j
+3.Prometheus or will start AWS
+4.Migrate your store project to Spring Boot - Microservices.
+
+------------------------------------------------------------------------
+
+	1.Jenkins - Pipeline - Script based and  Groovy - UI based.
+	
+		Pipeline:
+		---------
+			[Car manufacturing]->
+				pushing your source code to repo -> Run Quality gates (clean code) -> testing (all types of testing all types of reports)
+				->packaging -> deploy
+				
+			
+			In Script Based it is added to git and distrubution is easier and reusability is high.
+			   ------------
+			
+			Apache Groovy 
+			-------------
+									//WILL STUDY AFTER DOCKER
+--------------------------------------------------------------------------------------------------------------------
+
+	Circuit Breaker : Resilience4j:
+	-------------------------------
+	
+	getting started with resilience4j circuit breaker:
+	
+		-> RestTemplate (Web client) / Feign (?)
+				check aobut RestTemplate method calling in main and calling it in springbootapplication (in res4j-client spring starter project)
+				
+	
+	resl server - 8071
+	resl client - 8072 
+	
+			when 8072 runs it moves to 8071 but if 8071 is failed, how will the client know that the sever is down?
+			->thats where AOP(circuit breaer comes into play)
+					->it intercepts and deals with call on fail, as an interceptor.
+			
+
+-----------------------------------------------------------------------------------------------------------------------
+
+	In CIRCUIT BREAKER there exists 3 states : 
+	------------------------------------------
+	
+			
+			1.OPEN    -  when calls get failed and number of failure calls get high -> it moves to open state.
+			
+			2.HALF_OPEN  - staying in open state for sometime will enable half open state for debugging. 
+							(after succesicve routed calls,say 3 simultanoeuly, it can go to CLOSED state again)
+			
+			3.CLOSED  -  connection is complete and it will route the request perfectly.
+			
+-----------------------------------------------------------------------------------------------------------------------
+
+							DOCKER (Kubernets - Messaging with Rabbit MQ and kafka)
+							------
+							
+ [  Ansible (DevOps) ]
+ [ Chef and Puppet (DevOps) ]
+
+Types of virtualization: 
+------------------------
+
+	1. Virtualization - heavyweight : 
+	
+	2. Containerization - lightweight : the outcome is converted into image. //  [Containers - dockers.]
+							
+
+	
+		Docker steps: 
+		-------------
+		
+		step 0 : create a new folder and swith to that folder.
+		step 1 : create a docker file, and dont keep ohter files.
+		step 2 : define the libs/bins 
+		step 3 : build an image with docker file.
+		step 4 : run the image file to instantiate the conatainer - runtime instance of an image which 
+				 is based on Dockerfile specification.
+		
+		-> Dockerfile will have 3 things : 
+			bringing up files,
+			installing the environment,
+			running the file.
+			
+			
+		-> docker build -t myhello:v1 
+		
+		// for creating an image with the certain name.
+		
+		-> docker file should be named 'Dockerfile'.
+		
+		-> docker build .  // for building the entire docker folder.
+		
+		-> all commands in docker start with uppercase. //IMPORTANT TO CHECK ERRORS IN Dockerfile //UPPERCASE CHECK.
+		
+		Docker working: 
+		---------------
+		
+		In Docker, our ultimate aim is to make an image, and to execute that image in an environment.
+		
+		---------------------------------------------------------------------------------------------
+		Dockerfile: (syntax)
+		-----------
+		
+			FROM openjdk:11  // openjdk:11 is an image in dockerhub // every image has a base image.
+			RUN mkdir /app   //making a directory and naming it '/app' and it gets stored in base.
+			COPY Hello.java  // copying Hello.java to the folder '/app'.
+			
+			WORKDIR /app     // making '/app' the working directory.
+			RUN javac Main.java  // running java file.
+			CMD ["java","Main"   //running java file.
+			
+		-----------------------------------------------------------------------------------------------
+			
+		-> docker run -it ubuntu // interactive mode where we can enter running containers in docker.
+		
+		-> docker ps -a // to view the list of containers with container IDs , image, status etc 
+		
+		-> docker stop container_ID // to stop the docker container.
+		
+		->docker run -d -p 9000:80 ubapache:latest // to change port from 8080 to 9000 and run apache server on ubuntu.
+		
+		
+		
+
+			
+		
+		
+		
+		
+			
+

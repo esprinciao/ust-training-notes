@@ -1,0 +1,207 @@
+
+Annotations we learnerd till now:
+
+@Configuration 
+
+@Autowired 
+
+@Component 
+
+@ComponentScan
+
+@Import
+
+@Profile
+
+@Primary 
+
+@Qualifier 
+
+@RestController
+
+@RequestMapping
+
+@PreDestroy
+
+@PostInit 
+
+@GetMapping
+
+@PutMapping
+
+@PostMapping
+
+@DeleteMapping
+
+@Lazy 
+
+-------------------------------------------------------------------------------------------------------------------------
+
+static final SpringApplicationShutdownHook shutdownHook = new SpringApplicationShutdownHook();
+
+	shutdownHook are also called as call backs.
+	
+DefaultBootStrapContext class.
+
+==========================================================================================================================
+
+Servelets - 
+-----------
+
+Servelets are behind the RESTful services and backbone of the development.
+
+### Servlets
+Servlets are Java programs that run on a web server or application server and act as a middle layer between a request 
+from a web browser or other HTTP client and databases or applications on the HTTP server. 
+
+A servlet can:
+
+1. **Read explicit data** sent by the client (e.g., web browser).
+2. **Read implicit HTTP request data** sent by the browser.
+3. **Generate results**.
+4. **Send the explicit data** (i.e., the document) to the client.
+5. **Send implicit HTTP response data** to the client.
+
+#### Key Points:
+- **Lifecycle Methods**: `init()`, `service()`, `destroy()`.
+- **HTTP Servlets**: Extending `HttpServlet` for handling `doGet()`, `doPost()`, etc.
+- **Servlet Configuration**: Deployment descriptors (web.xml), annotations (`@WebServlet`).
+
+Servlet Engines-
+----------------
+
+A servlet engine, also known as a servlet container, is a part of a web server or application server that interacts with Java servlets. 
+The servlet engine is responsible for managing the lifecycle of servlets, mapping a URL to a particular servlet, 
+and ensuring that the requests are handled properly.
+
+Examples:
+---------
+- **Apache Tomcat**
+- **Jetty**
+- **GlassFish**
+
+Web Servers
+------------
+A web server is a system that hosts websites and delivers web pages to clients upon request. It uses the HTTP protocol to communicate with clients and serve them the requested resources (HTML pages, images, etc.).
+
+#### Key Points:
+- **Functionality**: Handles HTTP requests, serves static content, supports dynamic content generation via CGI, Servlets, etc.
+- **Popular Web Servers**:
+  - **Apache HTTP Server**
+  - **Nginx**
+  - **Microsoft Internet Information Services (IIS)**
+
+
+
+Application Server - 
+--------------------
+An application server provides more features than a web server, including support for Java EE applications, Enterprise JavaBeans (EJB), JMS (Java Message Service), and other enterprise services.
+
+Deployment Descriptor (web.xml)
+	A configuration file in a web application that defines the servlets, servlet mappings, welcome files, and other settings.
+
+Servlets API
+	- **javax.servlet**: Contains interfaces and classes for writing servlets.
+	- **javax.servlet.http**: Provides HTTP-specific implementations.
+
+
+Example of a Simple Servlet:
+----------------------------
+
+
+@WebServlet("/hello")
+public class HelloWorldServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("<h1>Hello, World!</h1>");
+    }
+}
+
+
+### Deployment Descriptor (web.xml) Example
+--------------------------------------------
+
+
+```xml
+<web-app>
+    <servlet>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <servlet-class>HelloWorldServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+</web-app>
+```
+
+
+Steps to Set Up a Servlet
+-------------------------
+1. **Set Up a Development Environment**: Install JDK, Apache Tomcat, or any other servlet container.
+2. **Create a Project Structure**: Organize your project with `WEB-INF`, `classes`, and `lib` directories.
+3. **Write a Servlet**: Create a Java class that extends `HttpServlet`.
+4. **Configure web.xml**: Define your servlets and mappings.
+5. **Deploy the Application**: Package your application as a WAR file and deploy it to the servlet container.
+6. **Access the Servlet**: Use a web browser or HTTP client to send requests to the servlet.
+
+
+Spring MVC v/s REST : 
+----------------------
+
+Spring controller v/s MVC Controller- 
+---------------------------------------
+
+View vs. Data:
+
+	@Controller returns views (HTML, JSP, Thymeleaf templates, etc.).
+
+	@RestController returns data (usually JSON or XML).
+
+Annotation Requirements:
+
+	@Controller methods usually need @ResponseBody if returning data instead of a view.
+
+	@RestController implies @ResponseBody on all methods, so no need for @ResponseBody on each method.
+
+Use Cases:
+
+	@Controller is used in applications where the client expects HTML or a rendered view.
+
+	@RestController is used in REST APIs where the client expects raw data (JSON, XML).
+	
+	
+	
+--------------------------------------------------------------------
+
+.\mvnw spring-boot:run // to run without maven. 
+
+===============================================================================
+
+
+ORM - Object relational mapping - is a programming technique for automatic mapping  and converting data.
+we just have to switch ORMs rather than changing the entire db or application logic.
+
+JPA - Java Persistence API - Java Persistence API (JPA) is a Java specification for managing, persisting, 
+and accessing data between Java objects and a relational database. 
+It provides a way to map Java objects to database tables and vice versa, 
+allowing developers to interact with databases using Java objects rather than SQL queries.
+
+EJB - Enterprise JavaBeans (EJBs) - are a part of the Java EE (Jakarta EE) specification that provides a robust 
+and scalable component model for developing distributed, transactional, and secure enterprise applications.
+
+POJO - Plain Old Java Object -  is a simple Java object that follows certain conventions but is otherwise free from any specific constraints. 
+POJOs are used to create objects with data and behavior in a straightforward manner, 
+and they are not bound by any special framework or infrastructure requirements.
+
+
+sprind data jpa :   jpa -> hibernet orm -> annotations
+
+
+JPA - MediaType.APPLICATION_JSON_VALUE.
+
+
+
+
+

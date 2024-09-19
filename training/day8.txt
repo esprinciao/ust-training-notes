@@ -1,0 +1,62 @@
+
+
+microservices architecture: (Architecture diagram - NEEDED - IMPORTANT)
+--------------------------
+
+API gateway: 
+
+Today:
+
+		Spring Cloud Gateway: https://spring.io/projects/spring-cloud-gateway
+		
+		1.Cloud Gateway ports: Registry : 8761 , HelloService: 8071, HelloClient:8072 , Gateway : 8070
+		2.Cloud Config
+		
+		(Did it in VM gateway project / gateway /config server - connecting github using configuration.)
+		
+				In Gateways we have 2 methods: 
+				------------------------------
+				
+					1. give route in application.yaml
+				
+					2.using build().router and adding route in the .java itself and 
+					  enabling configuration @EnableServeConfiguration in SpringbootApplication.
+					  
+					(SpringConfigApplication.class)
+					(notes availible in the .txt in the project folder)
+		
+				In cloud-config-
+				-----------------
+					we created a configrepo in our github account and its link was added to our application.properties
+					in the ConfigServer Project in VM.
+					
+					we accessed the github using the 
+					
+					localhost:port_number/default/properties
+					----------------------------------------
+					
+									
+-----------------------------------------------------------------------------------------------------------------------
+
+	In config-server: 
+		
+		2 ways:
+		
+			1. to push/manipulate into github repository
+			2. to manipulate in local repository
+
+--------------------------------------------------------------------------------------------------------------------------
+
+3.Open Feign 
+4.Circuit Breakers
+
+
+3.Open Feign - (Alternative to RestTemplate / NEW / Easier / DRY principle )
+
+	Spring Cloud OpenFeign is a tool in the Spring ecosystem that simplifies making HTTP requests to other services. 
+	It allows you to create HTTP clients with a declarative syntax, making your code cleaner and easier to maintain.
+	
+	
+	
+	Microservices synonymously means REST api  but not every microservice is a rest api.
+	

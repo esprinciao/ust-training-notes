@@ -1,0 +1,9 @@
+
+	
+	align - main axis 
+	
+	jusitify - cross axis
+
+
+	div 
+	
